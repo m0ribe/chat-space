@@ -9,9 +9,9 @@
   height: 100vh;
   width: 100vw;
   display: flex;
-  color: #ffffff;
   background-color: yellow;
   .Side-bar{
+    color: #ffffff;
     background-color: #253141;
     width: 300px;
     &__User-name{
@@ -22,6 +22,7 @@
       align-items: center;
       margin: 0 20px;
       &__Name-logo{
+        font-size: 16px;
         display: block;
       }
       &__Icons{
@@ -62,6 +63,35 @@
     width: calc( 100vw - 300px );
     &__Group-info{
       height: 100px;
+      margin: 0 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &__Detail{
+        display: flex;
+        flex-direction: column;
+        &__Group-name{
+          margin: 35px 0 0 0;
+          color: #333333;
+          font-size: 20px;
+        }
+        &__member-box{
+          margin: 15px 0 0 0;
+          display: flex;
+          color: #999999;
+          font-size: 12px;
+        }
+      }
+      &__Edit{
+        margin: 28px 0 0 0;
+        height: 40px;
+        width: 72px;
+        border: 1px solid #38aef0;
+        color: #38aef0;
+        display: block;
+        text-align: center;
+        line-height: 40px;
+      }
     }
     &__Message-list{
       height: calc( 100% - 190px );
