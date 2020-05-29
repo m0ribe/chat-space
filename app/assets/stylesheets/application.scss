@@ -4,3 +4,38 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+
+.wrapper{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  background-color: yellow;
+  .Side-bar{
+    background-color: #253141;
+    width: 300px;
+    &__User-name{
+      height: 100px;
+    }
+    &__Group-list{
+    height: calc( 100% - 100px );
+    background-color: #2f3e51;
+    }
+  }
+  .Main-chat{
+    background-color: #ffffff;
+    width: calc( 100vw - 300px );
+    &__Group-info{
+      height: 100px;
+    }
+    &__Message-list{
+      height: calc( 100% - 190px );
+      background-color: #fafafa;
+    }
+    &__Message-form{
+      height: 90px;
+      background-color: #d2d2d2;
+    }
+  }
+}
+
+
