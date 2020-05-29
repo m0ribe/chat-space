@@ -9,20 +9,56 @@
   height: 100vh;
   width: 100vw;
   display: flex;
+  color: #ffffff;
   background-color: yellow;
   .Side-bar{
     background-color: #253141;
     width: 300px;
     &__User-name{
+      font-weight: bold;
       height: 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 20px;
+      &__Name-logo{
+        display: block;
+      }
+      &__Icons{
+        width: 60px;
+        display: flex;
+        justify-content: flex-end;
+        &--block{
+          margin: 0 0 0 5px;
+          display: block;
+          &__logo{
+            display: block;
+            color: #fff;
+          }
+        }
+      }
     }
     &__Group-list{
-    height: calc( 100% - 100px );
-    background-color: #2f3e51;
+      height: calc( 100% - 100px );
+      background-color: #2f3e51;
+      overflow:hidden;
+      &__Text-box{
+        margin: 20px 20px 40px 20px;
+        border: 2px solid white;
+        &__Group-name{
+          font-size: 15px;
+        }
+        &__New-comment{
+          margin: 5px 0 0 0;
+          font-size: 11px;
+        }
+      }
+      
     }
   }
   .Main-chat{
     background-color: #ffffff;
+    height: 100vh;
     width: calc( 100vw - 300px );
     &__Group-info{
       height: 100px;
