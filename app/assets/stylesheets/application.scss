@@ -1,0 +1,156 @@
+@import "posts";
+@import "reset";
+@import "modules/messages";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+.wrapper{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  .Side-bar{
+    color: #ffffff;
+    background-color: #253141;
+    width: 300px;
+    &__User-name{
+      font-weight: bold;
+      height: 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 20px;
+      &__Name-logo{
+        font-size: 16px;
+      }
+      &__Icons{
+        width: 60px;
+        display: flex;
+        justify-content: flex-end;
+        &--block{
+          margin: 0 0 0 5px;
+          &__logo{
+            color: #fff;
+          }
+        }
+      }
+    }
+    &__Group-list{
+      height: calc( 100% - 100px );
+      background-color: #2f3e51;
+      overflow:hidden;
+      &__Text-box{
+        margin: 20px 20px 40px 20px;
+        &__Group-name{
+          font-size: 15px;
+        }
+        &__New-comment{
+          margin: 5px 0 0 0;
+          font-size: 11px;
+        }
+      }
+    }
+  }
+  .Main-chat{
+    background-color: #ffffff;
+    width: calc( 100vw - 300px );
+    &__Group-info{
+      height: 100px;
+      margin: 0 40px;
+      display: flex;
+      justify-content: space-between;
+      &__Detail{
+        &__Group-name{
+          margin: 35px 0 0 0;
+          color: #333333;
+          font-size: 20px;
+        }
+        &__member-box{
+          margin: 15px 0 0 0;
+          display: flex;
+          color: #999999;
+          font-size: 12px;
+        }
+      }
+      &__Edit{
+        margin: 28px 0 0 0;
+        height: 40px;
+        width: 72px;
+        border: 1px solid #38aef0;
+        color: #38aef0;
+        text-align: center;
+        line-height: 40px;
+        text-decoration: none;
+      }
+    }
+    &__Message-list{
+      height: calc( 100% - 190px );
+      background-color: #fafafa;
+      padding: 40px;
+      &__Text-box{
+        margin: 0 0 45px 0;
+        overflow:hidden;
+        &__Comment{
+          margin: 12px 0 0 0;
+          color: #3434A54;
+          font-size: 14px;
+        }
+        &__Text-info{
+          display: flex;
+          font-size: 12px;
+          &__User{
+            color: #333333;
+            font-size: 16px;
+            font-weight: bold;
+          }
+          &__Date{
+            color: #999999;
+            padding: 0 0 0 10px;
+          }
+        }
+      }
+    }
+    &__Message-form{
+      height: 90px;
+      background-color: #d2d2d2;
+      display: flex;
+      align-items: center;
+      &__Form{
+        height: 50px;
+        margin: 0 40px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        &__Textbox{
+          height: 100%;
+          width: calc( 100% - 105px );
+          display: flex;
+          background-color: white;
+          &__Text{
+            padding: 0 0 0 10px;
+            width: calc( 100% - 38px);
+            border: none;
+          }
+          &__Icon{
+            color: #333333;
+            font-size: 28px;
+            line-height: 28px;
+            margin: 11px 0;
+            input{
+              display: none;
+            }
+          } 
+        }
+        &__Send{
+          margin: 0 0 0 15px;
+          padding: 0 30px;
+          width: 100px;
+          text-align: center;
+          line-height: 50px;
+          background-color: #38aef0;
+          color: white;
+          border: none;
+        } 
+      }
+    }
+  }
+}
