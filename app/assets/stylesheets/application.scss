@@ -45,7 +45,6 @@
       overflow:hidden;
       &__Text-box{
         margin: 20px 20px 40px 20px;
-        border: 2px solid white;
         &__Group-name{
           font-size: 15px;
         }
@@ -134,15 +133,19 @@
           padding: 0 0 0 10px;
           height: 100%;
           width: calc( 100% - 75px );
+          display: flex;
           background-color: white;
+          overflow: hidden;
           &__Text{
             height: 100%;
-            width: calc( 100% - 30px);
+            width: calc( 100% - 38px);
             border: none;
             color: #333333;
           }
           &__Icon{
             color: #333333;
+            font-size: 28px;
+            margin: 11px 0;
           } 
         }
         &__Send{
