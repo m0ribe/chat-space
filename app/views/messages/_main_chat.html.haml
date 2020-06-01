@@ -10,5 +10,19 @@
           1,2,3,4,5,5
     = link_to "", class: "Main-chat__Group-info__Edit" do
       Edit
+
   .Main-chat__Message-list
+    .Main-chat__Message-list__Text-box
+      .Main-chat__Message-list__Text-box__Text-info
+        .Main-chat__Message-list__Text-box__Text-info__User
+          tarou
+        .Main-chat__Message-list__Text-box__Text-info__Date
+          2020
+      .Main-chat__Message-list__Text-box__Comment
+        aaaa
   .Main-chat__Message-form
+    = form_with class: "Main-chat__Message-form__Form" do |form|
+      .Main-chat__Message-form__Form__Textbox
+        = form.text_field :search, class: "Main-chat__Message-form__Form__Textbox__Text"
+        = icon('far', 'edit', class: "Main-chat__Message-form__Form__Textbox__icon")
+      = form.submit value: "SEND", class: "Main-chat__Message-form__Form__Send"
