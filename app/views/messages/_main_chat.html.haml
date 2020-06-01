@@ -23,6 +23,6 @@
   .Main-chat__Message-form
     = form_with class: "Main-chat__Message-form__Form" do |form|
       .Main-chat__Message-form__Form__Textbox
-        = form.text_field :search, class: "Main-chat__Message-form__Form__Textbox__Text"
-        = icon('far', 'edit', class: "Main-chat__Message-form__Form__Textbox__icon")
+        = form.text_field :search, placeholder: "Type a message", class: "Main-chat__Message-form__Form__Textbox__Text"
+        = icon('far', 'image', class: "Main-chat__Message-form__Form__Textbox__Icon")
       = form.submit value: "SEND", class: "Main-chat__Message-form__Form__Send"
