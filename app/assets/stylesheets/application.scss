@@ -79,6 +79,7 @@
         color: #38aef0;
         text-align: center;
         line-height: 40px;
+        text-decoration: none;
       }
     }
     &__Message-list{
@@ -86,9 +87,10 @@
       background-color: #fafafa;
       padding: 40px;
       &__Text-box{
+        margin: 0 0 45px 0;
         overflow:hidden;
         &__Comment{
-          margin: 11px 0 35px 0;
+          margin: 12px 0 0 0;
           color: #3434A54;
           font-size: 14px;
         }
@@ -97,9 +99,12 @@
           font-size: 12px;
           &__User{
             color: #333333;
+            font-size: 16px;
+            font-weight: bold;
           }
           &__Date{
             color: #999999;
+            padding: 0 0 0 10px;
           }
         }
       }
@@ -112,17 +117,16 @@
       &__Form{
         height: 50px;
         margin: 0 40px;
-        width: calc( 100% - 80px );
+        width: 100%;
         display: flex;
-        justify-content: space-between;
         align-items: center;
         &__Textbox{
-          padding: 0 0 0 10px;
           height: 100%;
-          width: calc( 100% - 75px );
+          width: calc( 100% - 105px );
           display: flex;
           background-color: white;
           &__Text{
+            padding: 0 0 0 10px;
             width: calc( 100% - 38px);
             border: none;
           }
@@ -137,7 +141,9 @@
           } 
         }
         &__Send{
-          width: 50px;
+          margin: 0 0 0 15px;
+          padding: 0 30px;
+          width: 100px;
           text-align: center;
           line-height: 50px;
           background-color: #38aef0;
