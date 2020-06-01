@@ -4,12 +4,10 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
-
 .wrapper{
   height: 100vh;
   width: 100vw;
   display: flex;
-  background-color: yellow;
   .Side-bar{
     color: #ffffff;
     background-color: #253141;
@@ -23,7 +21,6 @@
       margin: 0 20px;
       &__Name-logo{
         font-size: 16px;
-        display: block;
       }
       &__Icons{
         width: 60px;
@@ -31,9 +28,7 @@
         justify-content: flex-end;
         &--block{
           margin: 0 0 0 5px;
-          display: block;
           &__logo{
-            display: block;
             color: #fff;
           }
         }
@@ -53,22 +48,17 @@
           font-size: 11px;
         }
       }
-      
     }
   }
   .Main-chat{
     background-color: #ffffff;
-    height: 100vh;
     width: calc( 100vw - 300px );
     &__Group-info{
       height: 100px;
       margin: 0 40px;
       display: flex;
       justify-content: space-between;
-      align-items: center;
       &__Detail{
-        display: flex;
-        flex-direction: column;
         &__Group-name{
           margin: 35px 0 0 0;
           color: #333333;
@@ -87,16 +77,13 @@
         width: 72px;
         border: 1px solid #38aef0;
         color: #38aef0;
-        display: block;
         text-align: center;
         line-height: 40px;
       }
     }
-    
     &__Message-list{
       height: calc( 100% - 190px );
       background-color: #fafafa;
-      overflow:hidden;
       padding: 40px;
       &__Text-box{
         overflow:hidden;
@@ -135,32 +122,29 @@
           width: calc( 100% - 75px );
           display: flex;
           background-color: white;
-          overflow: hidden;
           &__Text{
-            height: 100%;
             width: calc( 100% - 38px);
             border: none;
-            color: #333333;
           }
           &__Icon{
             color: #333333;
             font-size: 28px;
+            line-height: 28px;
             margin: 11px 0;
+            input{
+              display: none;
+            }
           } 
         }
         &__Send{
-          display: block;
-          height: 100%;
           width: 50px;
           text-align: center;
           line-height: 50px;
-          border: 1px solid #38aef0;
-          color: #38aef0;
+          background-color: #38aef0;
+          color: white;
+          border: none;
         } 
       }
-
     }
   }
 }
-
-

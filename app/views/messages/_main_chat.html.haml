@@ -23,6 +23,9 @@
   .Main-chat__Message-form
     = form_with class: "Main-chat__Message-form__Form" do |form|
       .Main-chat__Message-form__Form__Textbox
-        = form.text_field :search, placeholder: "Type a message", class: "Main-chat__Message-form__Form__Textbox__Text"
-        = icon('far', 'image', class: "Main-chat__Message-form__Form__Textbox__Icon")
+        = form.text_field :text, placeholder: "Type a message", 
+          class: "Main-chat__Message-form__Form__Textbox__Text"
+        = form.label :image, class: "Main-chat__Message-form__Form__Textbox__Icon" do
+          %i.fa.fa-image
+          = form.file_field :image
       = form.submit value: "SEND", class: "Main-chat__Message-form__Form__Send"
