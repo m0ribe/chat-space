@@ -5,7 +5,7 @@
         group
       .Main-chat__Group-info__Detail__member-box
         .Main-chat__Group-info__Detail__member-box__member
-          member:
+          member : 
         .Main-chat__Group-info__Detail__member-box__list
           1,2,3,4,5,5
     = link_to "", class: "Main-chat__Group-info__Edit" do
@@ -23,7 +23,7 @@
   .Main-chat__Message-form
     = form_with class: "Main-chat__Message-form__Form" do |form|
       .Main-chat__Message-form__Form__Textbox
-        = form.text_field :text, placeholder: "Type a message", 
+        = form.text_field :text, placeholder: "type a message", 
           class: "Main-chat__Message-form__Form__Textbox__Text"
         = form.label :image, class: "Main-chat__Message-form__Form__Textbox__Icon" do
           %i.fa.fa-image
