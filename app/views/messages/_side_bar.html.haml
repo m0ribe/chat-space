@@ -3,18 +3,18 @@
     .Side-bar__User-name__name-logo
       = current_user.name
     .Side-bar__User-name__Icons
-      = link_to "index", class: "Side-bar__User-name__Icons--block" do
+      = link_to new_group_path(current_user), class: "Side-bar__User-name__Icons--block" do
         = icon('far', 'edit', class: "Side-bar__User-name__Icons--block__logo")
       = link_to edit_user_path(current_user), class: "Side-bar__User-name__Icons--block" do
         = icon('fa', 'cog', class: "Side-bar__User-name__Icons--block__logo")
 
   
   .Side-bar__Group-list
-    .Side-bar__Group-list__Text-box
-      .Side-bar__Group-list__Text-box__Group-name
-        group1
-      .Side-bar__Group-list__Text-box__New-comment
-        aaaa
-    
-
+    - current_user.groups.each do |group|
+      .Side-bar__Group-list__Text-box
+        = link_to edit_group_path(group) do
+          .Side-bar__Group-list__Text-box__Group-name
+            = group.name
+          .Side-bar__Group-list__Text-box__New-comment
+            aaa
   
