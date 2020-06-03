@@ -1,13 +1,13 @@
 @import "posts";
 @import "reset";
-@import "modules/messages";
 @import "font-awesome-sprockets";
 @import "font-awesome";
-@import "modules/user";
+@import "modules/messages";
 @import "modules/user";
 @import "modules/flash";
+@import "modules/group";
 
-.wrapper{
+.Wrapper{
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -45,6 +45,7 @@
         margin: 20px 20px 40px 20px;
         &__Group-name{
           font-size: 15px;
+          text-decoration: none;
         }
         &__New-comment{
           margin: 5px 0 0 0;
