@@ -45,11 +45,12 @@
         margin: 20px 20px 40px 20px;
         &__Group-name{
           font-size: 15px;
-          text-decoration: none;
+          color: #fff;
         }
         &__New-comment{
           margin: 5px 0 0 0;
           font-size: 11px;
+          color: #fff;
         }
       }
     }
@@ -73,6 +74,9 @@
           display: flex;
           color: #999999;
           font-size: 12px;
+          &__list{
+            margin: 0 0 0 5px;
+          }
         }
       }
       &__Edit{
