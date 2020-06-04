@@ -1,30 +1,23 @@
+
 .Main-chat
   .Main-chat__Group-info
     .Main-chat__Group-info__Detail
       .Main-chat__Group-info__Detail__Group-name
-        group
+        = @group.name
       .Main-chat__Group-info__Detail__member-box
         .Main-chat__Group-info__Detail__member-box__member
-          member : 
-        .Main-chat__Group-info__Detail__member-box__list
-          1,2,3,4,5,5
-    = link_to "", class: "Main-chat__Group-info__Edit" do
+          member :   
+        = render partial: 'member-list', collection: @group.users, as: "list"
+    = link_to edit_group_path(params[:group_id]), class: "Main-chat__Group-info__Edit" do
       Edit
 
   .Main-chat__Message-list
-    .Main-chat__Message-list__Text-box
-      .Main-chat__Message-list__Text-box__Text-info
-        .Main-chat__Message-list__Text-box__Text-info__User
-          tarou
-        .Main-chat__Message-list__Text-box__Text-info__Date
-          2020
-      .Main-chat__Message-list__Text-box__Comment
-        aaaa
+    = render @messages
+
   .Main-chat__Message-form
-    = form_with class: "Main-chat__Message-form__Form" do |form|
+    = form_with model: [@group, @message], html: {class: "Main-chat__Message-form__Form"}, local: true do |form|
       .Main-chat__Message-form__Form__Textbox
-        = form.text_field :text, placeholder: "type a message", 
-          class: "Main-chat__Message-form__Form__Textbox__Text"
+        = form.text_field :content, placeholder: "type a message", class: "Main-chat__Message-form__Form__Textbox__Text"
         = form.label :image, class: "Main-chat__Message-form__Form__Textbox__Icon" do
           %i.fa.fa-image
           = form.file_field :image
