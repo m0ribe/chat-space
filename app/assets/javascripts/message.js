@@ -54,7 +54,6 @@ $(function(){
       contentType: false
     })
     .done(function(data){
-      console.log(this);
       let html = buildHTML(data);
       $('.Main-chat__Message-list').append(html);
       $('.Main-chat__Message-form__Form')[0].reset();
