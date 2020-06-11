@@ -94,6 +94,7 @@
       height: calc( 100% - 190px );
       background-color: #fafafa;
       padding: 40px;
+      overflow: scroll;
       &__Text-box{
         margin: 0 0 45px 0;
         overflow:hidden;
